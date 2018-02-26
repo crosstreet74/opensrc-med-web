@@ -1,0 +1,406 @@
+@charset "utf-8";
+@import url("ui.css");
+
+
+
+/* cm_layer_
+------------------------------------------ */
+
+/* cm_layer_message-send */
+.cm_layer_message-send {width: 885px;height: 433px;}
+
+/* cm_layer_message-send_container */
+.cm_layer_message-send_container {display: inline-block;padding: 5px;}
+
+.cm_layer_message-send_container--left {width: 430px;height: 385px;}
+.cm_layer_message-send_container--left .cm_tit_rcv {height: 30px;}
+.cm_layer_message-send_container--left .cm_table_rcv-grid {height: 308px;}
+.cm_layer_message-send_container--left table tr td {padding: 3px;font-weight: normal;} 
+
+.cm_layer_message-send_container--right {width: 430px;height: 385px;}
+.cm_layer_message-send_container--right .cm_panel_send-history {height: 345px;}
+.cm_layer_message-send_container--right .cm_panel_srch-send_dt {height: 30px;}
+.cm_layer_message-send_container--right .cm_panel_chk-group {width: 187px;height: 28px;}
+.cm_layer_message-send_container--right .cm_table_send-history {height: 293px;}
+.cm_layer_message-send_container--right .cm_table_send-history table tr td {font-weight: normal;}
+
+/* cm_layer_inoculation-ins */
+.cm_layer_inoculation-ins {width: 360px;height: 200px;}
+
+/* cm_layer_vaccination-code */
+.cm_layer_vaccination-code {width: 888px;}
+.cm_layer_vaccination-code .cm_table_vaccination-code {height: 287px;}
+.cm_layer_vaccination-code .cm_table_vaccination-code #mCSB_1_container {height: 266px;}
+.cm_layer_vaccination-code .cm_table_vaccination-code tr th {border: 0;}
+.cm_layer_vaccination-code .cm_table_vaccination-code tr td {border: 0;font-weight: normal;}
+
+/* cm_layer_vaccination-pat-send */
+.cm_layer_vaccination-pat-send {width: 800px;}
+
+/* cm_layer_vaccination-schedule */
+.cm_layer_vaccination-schedule {width: 800px;}
+.cm_layer_vaccination-schedule .cm_btn_group {width: 264px;}	
+.cm_layer_vaccination-schedule .cm_panel_grid-schedule_content {height: 190px;}
+.cm_layer_vaccination-schedule .cm_panel_grid-schedule_content table tr td {font-weight: normal;}
+.cm_layer_vaccination-schedule .cm_panel_grid-schedule_content .is_possibility {background-color: #e2f0d9;}
+.cm_layer_vaccination-schedule .cm_panel_grid-schedule_content .is_inout {background-color: #9dc3e6;}
+
+
+/* cm_layer_bundle-ord */
+.cm_layer_bundle-ord {width: 989px;height: 732px;}
+.cm_layer_bundle-ord_body {height: 674px;}
+.cm_layer_bundle-ord_body table tr td {font-weight: normal;}
+.cm_layer_bundle-ord_grid {width: 330px;height: 269px;}
+.cm_layer_bundle-ord_grid .cm_panel_bundle-vtb {padding-right: 3px;width: 55px;vertical-align: text-bottom;}
+.cm_layer_bundle-ord_grid .cm_layer_bundle-ord-tit_grid {height: 30px;}
+
+.cm_layer_bundle-ord_body .cm_panel_bundle-ord_grid-opt_box {height: 66px;}
+.cm_layer_bundle-ord_body .cm_panel_bundle-ord_grid-left {height: 120px;}
+.cm_layer_bundle-ord_body .cm_panel_bundle-ord_grid-left-ltype {height: 244px;}
+.cm_layer_bundle-ord_body .cm_panel_bundle-ord_grid-left-mtype {height: 244px;}
+.cm_layer_bundle-ord_body .cm_panel_bundle-ord_grid-lb-list {height: 264px;}
+.cm_layer_bundle-ord_body .cm_panel_bundle-ord_grid-rt-list {height: 186px;}
+.cm_layer_bundle-ord_body .cm_panel_bundle-ord_grid-rb-list {height: 223px;}
+.cm_layer_bundle-ord_body .cm_panel_bundle-ord_grid-box {height: 314px;}
+
+.cm_panel_bundle-ord_right .cm_panel_bundle-ord_grid-box-tab2 .cm_layer_bundle-ord_grid {width: 360px;height:269px;}
+.cm_panel_bundle-ord_right .cm_panel_bundle-ord_grid-box-tab2 .cm_layer_bundle-ord_grid-memo {height: 237px;}
+
+/* cm_layer_prescription-cpy */
+.cm_layer_prescription-cpy {width: 800px;}
+.cm_layer_prescription-cpy table tbody tr td {font-weight: normal;}
+.cm_layer_prescription-cpy .cm_table_diag_name {height: 150px;}
+.cm_layer_prescription-cpy .cm_table_diag_cont {height: 150px;}
+
+
+/* cm_layer_message-group */
+.cm_layer_message-group {width: 310px;height: 319px;}
+.cm_layer_message-group .cm_table_message-group {height: 226px;}
+.cm_layer_message-group .cm_table_message-group .cm_table_case3 >thead >tr >th {color: #808080;}
+.cm_layer_message-group .cm_table_message-group .cm_table_case3 >tbody >tr >td {font-weight: normal;}
+.cm_layer_message-group .cm_table_message-group .cm_table_case3 >tbody >tr >td:last-child {text-align: left;}
+.cm_layer_message-group .cm_table_message-group .cm_table_case3 tbody td input {width: 100%;}
+
+/* cm_layer_bookmark-check */
+.cm_layer_bookmark-check {width: 400px;height: 500px;}
+.cm_layer_bookmark-check_body table tr td{font-weight: normal;}
+.cm_layer_bookmark-check_body .cm_table_bookmark-check_wrap{height: 350px;}
+
+/* cm_layer_charge_confirm_pop */
+.cm_layer_charge_confirm_pop {width: 250px;height: 380px;}
+
+/* cm_layer_med-ofc_form */
+.cm_layer_med-ofc_form {width: 500px;height: 482px;}
+.cm_layer_med-ofc_form .cm_table_med-ofc_content {height: 400px;}
+.cm_layer_med-ofc_form .cm_table_med-ofc_content table tr td {font-weight: normal;}
+.cm_layer_med-ofc_form .cm_table_med-ofc_content tr.c-highlight td {color: #6cc9e8;}
+.cm_layer_med-ofc_form .cm_table_med-ofc_content table tr td.c-attention {color: #e99292;}
+
+/* cm_layer_charge-medical-care */
+.cm_layer_charge-medical-care {width: 600px;height: 436px;}
+.cm_layer_charge-medical-care_body {width: 249px;height: 351px;}	
+.cm_layer_charge-medical-care_body--right {width: 325px;}
+.cm_layer_charge-medical-care_body--right .cm_layer_charge-medical-care-grd-tit {line-height: 28px;}
+
+/* cm_layer_line-specific */
+.cm_layer_line-specific {width: 596px;height: 300px;}
+
+.cm_layer_line-specific_body {height: 259px;}
+
+.cm_layer_line-specific_body--left {width: 297px;padding: 3px;}
+.cm_layer_line-specific_body--left ul li {border-top: 1px solid #d0d3d6;}
+.cm_layer_line-specific_body--left ul li:first-child {border-top: 1px solid #d0d3d6;}
+.cm_layer_line-specific_body--left ul li.is_active {border-bottom: 0;}
+.cm_layer_line-specific_body--left ul li>a {padding-left: 3px;padding-right: 3px;}
+.cm_layer_line-specific_body--left .cm_panel_tab-body {top: 72px;overflow: hidden;width: 291px;height: 181px;border-top: 0;}
+
+.cm_layer_line-specific_body--right {width: 247px;height: 247px;padding: 3px;}
+.cm_layer_line-specific_body--right .cm_table_wrap {height: 239px;}
+.cm_layer_line-specific_body--right .cm_table_wrap table tbody tr td {font-weight: normal;}
+
+/* cm_layer-sympt-content-set */
+.cm_layer-sympt-content-set {width: 600px;}
+.cm_layer-sympt-content_body {height: 405px;}
+.cm_layer-sympt-content_body fieldset {height: 395px;}
+.cm_layer-sympt-content_body .cm_table_case3 td {font-weight: normal;}
+
+/* cm_layer_bundle */
+.cm_layer_bundle {width: 631px;}
+.cm_layer_bundle .cm_select_checkbox_txt {width: 55px;}
+.cm_layer_bundle_body {height: 675px;}
+.cm_layer_bundle .cm_ipttxt_case_wrap {height: 30px;margin: 10px 0;background-color: #fff;}
+.cm_layer_bundle_main {height: calc(100% - 117px - 50px);}
+.cm_layer_bundle_main >textarea {height: 144px;}
+.cm_layer_bundle_grid {height: calc((100% - 144px)/2);}
+.cm_layer_bundle_option {
+	-webkit-box-shadow: hoff voff radius color;
+	-moz-box-shadow: hoff voff radius color;
+	box-shadow: hoff voff radius color;
+	height: 117px;
+	padding: 10px 0;
+	border-top: 1px solid #d0d3d6;
+}
+.cm_layer_bundle_optiongroup >div {display: inline-block;}
+
+
+/* cm_layer_allergie */
+.cm_layer_allergie {width: 1024px;}
+
+/* cm_panel_charge */
+.cm_layer_charge {width: 693px;background-color: #f4f5f8;}
+.cm_layer_charge_body {height: 291px;}
+.cm_layer_charge_tab {
+	height: 40px;
+	-webkit-box-shadow: 0 2px 4px rgba(0,0,0,.3);
+	-moz-box-shadow: 0 2px 4px rgba(0,0,0,.3);
+	box-shadow: 0 2px 4px rgba(0,0,0,.3);
+}
+.cm_layer_charge_tab-content {height: calc(100% - 50px);}
+.cm_layer_charge_confirm {height: 40px;}
+.cm_layer_charge_form {height: calc(100% - 33px);}
+.cm_layer_charge_select {height: 40px;}
+.cm_layer_charge_default textarea {height: calc(100% - 40px);}
+
+.cm_layer_charge_exm-checkbox {height: 56px;}
+.cm_layer_charge_exm-textfield {height: calc((100% - 56px)/2);}
+
+/* cm_layer_pat-exm */
+.cm_layer_pat-exm {width: 800px;}
+
+/* cm_layer_exm-result */
+.cm_layer_exm-result {width: 1000px;}
+.cm_layer_exm-result_body {height: 656px;}
+.cm_layer_exm-result .cm_panel_form-opt_wrap {height: 51px;margin-bottom: 10px;}
+.cm_layer_exm-result .cm_panel_form-opt {padding: 10px;}
+.cm_layer_exm-result_content {height: calc(100% - 61px);}
+
+/* cm_layer_exm-prescribe */
+.cm_layer_exm-prescribe {width: 800px;height: 600px;}
+
+/* cm_layer_visit-history */
+.cm_layer_visit-history {width: 800px;}
+.cm_layer_visit-history_body {height: 600px;}
+.cm_layer_visit-history_content {height: calc(100% - 40px);}
+.cm_layer_visit-history_confirm {height: 30px;margin-top: 10px;}
+
+/* cm_layer_visit-history */
+.cm_layer_bookmark-form {width: 800px;height: 600px;}
+.cm_layer_bookmark-form_column {height: calc(100% - 40px);}
+.cm_layer_bookmark-form_confirm {height: 30px;margin-top: 10px;}
+
+/* cm_layer_attention-pat */
+.cm_layer_attention-pat {width: 800px;}
+.cm_layer_attention-pat_body {height: 600px;}
+.cm_layer_attention-pat .cm_panel_form-opt_wrap {height: 42px;margin-bottom: 10px;}
+.cm_layer_attention-pat .cm_panel_form-opt_prop {width: auto;}
+.cm_layer_attention-pat .cm_panel_form-opt_code {width: 60px;}
+.cm_layer_attention-pat_grid {height: calc(100% - 92px);background-color: #fff;}
+.cm_layer_attention-pat_confirm {height: 30px;margin-top: 10px;}
+
+/* cm_layer_disease */
+.cm_layer_disease {position: relative;width: 800px;}
+.cm_layer_disease_body {height: 800px;}
+.cm_layer_disease_history,
+.cm_layer_disease_srch {height: calc((100% - 100px)/2);background-color: #fff;}
+.cm_layer_disease_srch {margin-top: 10px;}
+.cm_layer_disease_title {height: 30px;}
+.cm_layer_disease_confirm {position: absolute;top: 55px;right: 10px;height: 30px;}
+.cm_layer_disease .cm_panel_form-opt_wrap {margin-bottom: 50px;}
+
+/* cm_layer_injury-certi */
+.cm_layer_injury-certi {width: 925px;height: 760px;}
+.cm_layer_injury-certi_list {height: 238px;background-color: #fff;}
+.cm_layer_injury-certi_list a {display: block;width: 100%;padding: 5px;}
+.cm_layer_injury-certi_list a:hover,
+.cm_layer_injury-certi_list a:focus,
+.cm_layer_injury-certi_list a.is_active {background-color: #f5f8f9;color: #4b90a7;}
+.cm_layer_injury-certi_general {height: 87px;}
+.cm_layer_injury-certi_ipt {width: 110px;}
+.cm_layer_injury-certi_code {width: 80px;}
+
+/* cm_layer_report */
+.cm_layer_report {width: 1024px;margin: 0 auto;}
+
+/* cm_layer_prescribecheck */
+.cm_layer_prescribecheck {width: 700px;height: 800px;}
+.cm_layer_prescribecheck_body {height: calc(100% - 34px);}
+.cm_layer_prescribecheck_body >:nth-child(2) {height: calc(100% - 42px);}
+
+/* cm_layer_med-pat-srch */ 
+.cm_layer_med-pat-srch {width: 1055px;height: 486px;}
+.cm_layer_med-pat-srch_body {height: 455px;}
+
+/* cm_layer_srch-itm-set */
+.cm_layer_srch-itm-set {width: 530px;}
+.cm_layer_srch-itm-set_body {height: 333px;}
+
+.cm_layer_srch-itm-set_body .cm_table_left {height: 247px;}
+.cm_layer_srch-itm-set_body .cm_table_right {height: 247px;}
+.cm_layer_srch-itm-set_body .cm_table_right .nice-select .current {color: #808080;font-size: 13px;}
+.cm_layer_srch-itm-set_body table tr td {font-weight: normal;}
+
+/* cm_layer_refund-history */
+.cm_layer_refund-history {width: 350px;height: 200px;}
+.cm_layer_refund-history_body {height: 166px;}
+.cm_layer_refund-history_body .cm_panel_refund-history_grid {height: 155px;}
+.cm_layer_refund-history_body .cm_panel_refund-history_grid tbody tr td {font-weight: normal;}
+
+/* cm_layer_vaccination_code */
+.cm_layer_vaccination_code {width: 800px;}
+.cm_layer_vaccination_code-body {height: 430px;}
+.cm_layer_vaccination_code-body fieldset {height: 420px;}
+
+/* cm_layer_insu-stdr */
+.cm_layer_insu-stdr {width: 800px;}
+
+.cm_layer_insu-stdr_body table tbody tr td {font-weight: normal;}
+.cm_layer_insu-stdr_body .cm_panel_lmt-stdr {height: 245px;}
+.cm_layer_insu-stdr_body .cm_panel_lmt-stdr .nice-select {z-index: 11;}
+.cm_layer_insu-stdr_body .cm_panel_lmt-stdr .cm_table_lmt-stdr {height: 150px;margin: 0 auto;}
+
+.cm_layer_insu-stdr_body .cm_panel_dup-med {height: 150px;}
+.cm_layer_insu-stdr_body .cm_panel_dup-med .cm_table_dup-med {height: 120px;margin: 0 auto;}
+
+/* cm_layer_symptom-hist-exam */
+.cm_layer_symptom-hist-exam {width: 450px;}
+.cm_layer_symptom-hist-exam table tbody tr td {font-weight: normal;}
+.cm_layer_symptom-hist-exam_body .cm_panel_symptom-exam_grid {height: 160px;}
+.cm_layer_symptom-hist-exam_body .cm_panel_hist-exam_grid {height: 160px;display: none;}
+.cm_layer_symptom-hist-exam_body .cm_panel_rcev-memo_grid {height: 160px;display: none;}
+
+/* cm_layer_resv-chk-med */
+.cm_layer_resv-chk-med {width: 800px;}
+.cm_layer_resv-chk-med .cm_panel_form-opt .cm_select_primary {z-index: 11;}
+.cm_layer_resv-chk-med table tbody tr td {font-weight: normal;}
+.cm_layer_resv-chk-med table tbody tr td.c-highlight {color: #4b90a7;}
+.cm_layer_resv-chk-med .cm_table_resv-chk-med {height: 200px;}
+
+/* cm_layer_med-hist-recog */
+.cm_layer_med-hist-recog {width: 900px;}
+.cm_layer_med-hist-recog .cm_layer_med-hist-grid {padding: 5px;}
+.cm_layer_med-hist-recog .cm_layer_med-hist-grid .cm_srch_primary {background-color: #f2f4f7;}
+.cm_layer_med-hist-recog .cm_layer_med-hist-grid .cm_panel_med-ins {margin-right: 2px;}
+
+/* cm_layer_frm-issue-hist */
+.cm_layer_frm-issue-hist {width: 900px;}
+.cm_layer_frm-issue-hist table tbody tr td {font-weight: normal;}
+.cm_layer_frm-issue-hist .cm_table_frm-issue-hist {height: 575px;}
+.cm_layer_frm-issue-hist .cm_table_diag-stdr {height: 118px;}
+
+/* cm_layer_another-hos-rslt */
+.cm_layer_another-hos-rslt {width: 800px;}
+.cm_layer_another-hos-rslt table tbody tr td {font-weight: normal;}
+.cm_layer_another-hos-rslt .cm_table_another-hos-rslt {height: 200px;}
+.cm_layer_another-hos-rslt .cm_table_another-hos-rslt-file {height: 73px;}
+.cm_layer_another-hos-rslt .cm_table_another-hos-rslt-file table tbody tr td{border-bottom: 1px solid #d0d3d6;border-right: 1px solid #d0d3d6;}
+.cm_layer_another-hos-rslt .cm_panel_form-opt_prop .cm_panel_form-opt_name {position: relative;top: -1px;}
+
+
+/* cm_layer_injury-diag */
+.cm_layer_injury-diag {width: 800px;}
+.cm_layer_injury-diag body table tbody tr td {font-weight: normal;text-indent: 5px;}
+.cm_layer_injury-diag_body .cm_panel_all-form {height: 275px;}
+.cm_layer_injury-diag_body .cm_table_exam-name {height: 216px;}
+.cm_layer_injury-diag_body .cm_table_diag-stdr {height: 118px;}
+.cm_layer_injury-diag_body .cm_panel_res-reg-no {margin-left: -8px;}
+.cm_layer_injury-diag_body .cm_table_injury {height: 335px;}
+.cm_layer_injury-diag_body .cm_table_injury table tbody tr td {border: 1px solid #d0d3d6;}
+
+/* cm_layer_general-diag */
+.cm_layer_general-diag {width: 800px;}
+.cm_layer_general-diag table tbody tr td {font-weight: normal;}
+.cm_layer_general-diag .cm_table_issue-hist {height: 665px;}
+.cm_layer_general-diag_body .cm_table_diag-stdr {height: 118px;}
+.cm_layer_general-diag_body .cm_panel_res-reg-no {margin-left: -8px;}
+.cm_layer_general-diag_body .cm_table_injury {height: 335px;}
+.cm_layer_general-diag_body .cm_table_injury table tbody tr td {border: 1px solid #d0d3d6;}
+.cm_layer_general-diag_body .cm_datepicker_primary {background-color: #f2f4f7;}
+
+/* cm_layer_srch-itm-set_body */
+.cm_layer_srch-itm-set_body .cm_table_right .nice-select {padding-left: 0;}
+.cm_layer_srch-itm-set_body .cm_table_right .current {padding-left: 0;}
+
+/* 아이콘 변경 예정 */
+.cm_layer_another-hos-rslt .cm_btnico-diskette {background-image: url(../images/btnico_diskette.png);background-size: 15px;width: 15px;height: 15px;font-size: 0;}
+.cm_layer_another-hos-rslt .cm_btnico-rotation {background-image: url(../images/spr_utils_ui.png);background-position: -64px -165px;width: 15px;height: 15px;font-size: 0;}
+.cm_layer_another-hos-rslt .cm_btnico-zoom {background-image: url(../images/btnico_zoom.png);background-size: 14px;width: 14px;height: 14px;font-size: 0;transform:rotate(85deg)};
+
+
+
+/* cm_panel_
+------------------------------------------ */
+
+/* .cm_panel_inoculation-ins_body */
+.cm_panel_inoculation-ins_body .cm_panel_inoculation-tit {line-height: 28px;}
+.cm_panel_inoculation-ins_body .cm_panel_inoculation-gb {height: 36px;}
+.cm_panel_inoculation-ins_body .cm_panel_inoculation-dt {height: 36px;}
+.cm_panel_inoculation-ins_body .cm_panel_inoculation-meth {height: 36px;}
+.cm_panel_inoculation-ins_body .cm_panel_inoculation-meth input {width: 189px;}
+
+/* cm_panel_vaccination-pat_content */
+.cm_panel_vaccination-pat_content {height: 300px;}
+.cm_panel_vaccination-pat_content table tr td {font-weight: normal;}
+.cm_panel_vaccination-pat_content table tr td:first-child {border-left: 0;}
+
+/* cm_panel_vaccination-pat_wrap */
+.cm_panel_vaccination-pat_wrap .cm_panel_form-vaccination-pat_prop {width: 140px;height: 28px;}
+.cm_panel_vaccination-pat_wrap .cm_panel_legend-schedule {width: 303px;height: 36px;}
+
+/* cm_panel_legend-schedule */
+.cm_panel_legend-schedule .cm_panel_legend-schedule-legend .cm_ico_badge--lightgreen {height: 13px;width: 13px;line-height: 13px;}
+.cm_panel_legend-schedule .cm_panel_legend-schedule-legend .cm_ico_badge--darkblue {height: 13px;width: 13px;line-height: 13px;}
+
+/* cm_panel_bundle-ord_left */
+.cm_panel_bundle-ord_left {position: absolute;width: 235px;height: 686px;}
+
+/* cm_panel_bundle-ord_right */
+.cm_panel_bundle-ord_right {position: absolute;right: 5px;width: 737px;}
+.cm_panel_bundle-ord_right--bottom {bottom: 5px;height: 314px;}
+
+/* cm_panel_charge-confirm-pop_body */
+.cm_panel_charge-confirm-pop_body {height: 295px;}
+
+/* .cm_panel_symptom-cont */
+.cm_panel_symptom-cont {height: 318px;}
+
+/* cm_panel_bundle-symptom-list */
+.cm_panel_bundle-symptom-list {height: 254px;}
+
+/* cm_panel_form-opt */ 
+.cm_panel_form-opt {
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+	-ms-align-items: center;
+	align-items: center;
+	-ms-justify-content: space-between;
+	justify-content: space-between;
+}
+.cm_panel_form-opt >:first-chlid {margin-left: 0;}
+.cm_panel_form-opt .cm_srch_primary {width: 105px;}
+.cm_panel_form-opt_prop {height: 28px;}
+.cm_panel_form-opt_name {width: 65px;}
+.cm_panel_form-opt_age {width: 54px;}
+
+/* cm_panel_opt-med-pat-srch */
+.cm_panel_opt-med-pat-srch {height: 74px;}
+.cm_panel_opt-med-pat-srch .cm_panel_opt-med-time {margin-left: 19px;}
+.cm_panel_opt-med-pat-srch .box-case3 {height: 29px;}
+.cm_panel_opt-med-pat-srch .cm_btn_group {margin-left: 28px;}
+.cm_panel_opt-med-pat-srch .cm_select_primary {z-index: 11;}
+
+.cm_panel_grid-med-pat-srch {height: 362px;}
+.cm_panel_grid-med-pat-srch tbody tr td {font-weight: normal;}
+
+/* cm_panel_vaccination-type */
+.cm_panel_vaccination-type .cm_table_vaccination-type {height: 335px;}
+.cm_panel_vaccination-type .cm_table_vaccination-type tbody tr td {font-weight: normal;}
+.cm_panel_vaccination-type .cm_table_vaccination-type tbody tr td:last-child {text-align: left;}
+.cm_panel_vaccination-type .cm_table_vaccination-num-list {height: 150px;}
+.cm_panel_vaccination-type .cm_table_vaccination-code-list {height: 150px;}
+.cm_panel_vaccination-type .cm_table_vaccination-num-list tbody tr td {font-weight: normal;}
+
+
+
+

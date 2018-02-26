@@ -1,0 +1,1496 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8" />
+    <meta name="keywords" content="사이트 키워드" />
+    <meta name="description" content="사이트 설명" />
+    <meta name="generator" content="사이트 제작 도구" />
+    <meta name="author" content="사이트 제작자" />
+    <meta name="viewport" content="width=device-width" />
+    <title>진료실</title>
+
+    <base href="../" />
+    <link rel="stylesheet" href="css/font.css" />
+    <link rel="stylesheet" href="css/global.css" />
+
+    <!-- 기본 프러그인  -->
+    <script src="plug/html5shiv.js"></script>
+    <script src="plug/jquery-1.12.4.min.js"></script>
+
+    <link rel="stylesheet" href="plug/jquery-ui/css/jquery-ui.css">
+    <script src="plug/jquery-ui/js/jquery-ui.js"></script>
+
+    <!--  cycle2  -->
+    <script src="plug/cycle2/jquery.cycle2.min.js"></script>
+    <script src="plug/cycle2/jquery.cycle2.carousel.min.js"></script>
+
+    <!-- jqPloat
+    <script src="plug/jqplot/js/jquery.jqplot.min.js"></script>
+    <script src="plug/jqplot/js/jqplot.pieRenderer.js"></script>
+    <script src="plug/jqplot/js/jqplot.donutRenderer.js"></script>
+    <link rel="stylesheet" href="plug/jqplot/css/jquery.jqplot.min.css" />
+    -->
+
+    <!-- scrollbar -->
+    <script src="plug/scrollbar/js/jquery.mCustomScrollbar.js"></script>
+    <link rel="stylesheet" href="plug/scrollbar/css/jquery.mCustomScrollbar.min.css" />
+    <!-- bootstrap
+    <link rel="stylesheet" href="plug/bootstrap/css/bootstrap.min.css">
+    <script src="plug/bootstrap/js/bootstrap.min.js"></script>
+    -->
+
+    <!-- nice-select -->
+    <link rel="stylesheet" href="plug/nice-select/css/nice-select.css">
+    <script src="plug/nice-select/js/jquery.nice-select.js"></script>
+
+    <!-- ax5ui -->
+    <script src="plug/ax5ui/js/ax5core.min.js"></script>
+    <!--<script src="plug/ax5ui/js/ax5layout.min.js"></script>-->
+    <script src="plug/ax5ui/js/ax5layout.min.js"></script>
+    <link rel="stylesheet" href="plug/ax5ui/css/ax5layout.css"/>
+    <script src="plug/ax5ui/js/ax5grid.js"></script>
+    <script src="plug/ax5ui/js/ax5autocomplete.js"></script>
+    <script src="plug/ax5ui/js/ax5docker.min.js"></script>
+    <link rel="stylesheet" href="plug/ax5ui/css/ax5docker.css" />
+    <script src="plug/ax5ui/js/ax5menu.js"></script>
+    <link rel="stylesheet" href="plug/ax5ui/css/ax5menu.css" />
+
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/script.js"></script>
+</head>
+<body>
+
+<!-- wrapper -->
+<div class="wrapper row">
+    <div class="cm_container_diag bdb-xs" data-ax5layout="ax1" data-config="{layout:'dock-panel'}">
+        <div data-dock-panel="{dock:'center', split:false,width: '50%',minWidth: '398'}" style="z-index:3">
+            <div data-ax5docker="docker1" class="bg-secondary h-full w-full pd-xs"></div>
+
+            <!-- todo: 브라우저 호환 - Chrome(o) Firefox(x) IE(x) -->
+            <!-- todo: *** 스택 패널 자신에게 이동 시 먹통 -> 최상위패널에 이동한것으로 간주? -->
+            <!-- todo: 확대 -> 필요한만큼 주위 패널.style('display','none'), height 조정 -> 자료구조적으로 불리 -->
+            <!-- todo: 최소화 ->  height 조정 -> 자료구조적으로 불리 -->
+            <!-- todo: 패널 높이 조정 flex-grow 값 조정하여도 repaint 이후 초기화됨-->
+            <!-- todo: 패널 이동 후 툴팁 증발, ax5 ui menu 못생김, header 높이가 name 높이보다 큼 -->
+            <!-- todo: 패널 item 하단 여백 제거 -> stylesheet 수정 -->
+            <!-- done: panel item에 scrollbar 적용하려면 내외부 element의 미지정된 높너비 지정필수 -->
+
+            <!-- ax5docker-pane section -->
+            <section style="display:none">
+
+                <!-- inc : 접수메모 -->
+                <header data-key="pane0_0_0_0" class="cm_panel_post_header row gradient-primary pdl-sm pdr-sm">
+                    <h3 class="cm_panel_post_title f-title-md bold c-dark">
+                        <span  data-cm-tooltip="true" data-cm-tooltip-placement="bottom" data-cm-tooltip-theme="yellow" title="접수메모 조회">접수메모</span>
+                    </h3>
+                </header>
+                <section data-key="pane0_0_0_0" class="cm_panel_post cm_panel_post--receipt h-full w-full bd-0">
+                    <fieldset class="cm_panel_post_body cm_panel_post_body--gray pd-sm" data-scroll="true">
+                        접수의 내용 접수의 내용접수의 내용접수의 내용접수의 내용접수의 내용접수의 내용접수의 내용접수의 내용접수의 내용접수의 내용접수의 내용
+                    </fieldset>
+                </section>
+                <!--// inc : 접수메모 -->
+
+                <!-- inc : 진료메모 -->
+                <header data-key="pane0_0_0_1" class="cm_panel_post_header row gradient-primary pdl-sm pdr-sm">
+                    <h3 class="cm_panel_post_title f-title-md bold c-dark">
+                        <span data-cm-tooltip="true" data-cm-tooltip-placement="bottom" data-cm-tooltip-theme="yellow" title="진료메모등록 및 관리">진료메모</span>
+                    </h3>
+                </header>
+                <section data-key="pane0_0_0_1" class="cm_panel_post cm_panel_post--receipt h-full w-full bd-0">
+                    <fieldset class="cm_panel_post_body cm_panel_post_body--gray pd-sm" data-scroll="true">
+                        <legend class="blind">진료메모</legend>
+
+                        <div class="cm_panel_post_history">
+                            <div class="row">
+                                <time>2017.08.05</time>
+                                <span>진료메모 있음.</span>
+                            </div>
+                            <div class="row">
+                                <time>2017.08.06</time>
+                                <span> 진료메모 있음.</span>
+                            </div>
+                            <div class="row">
+                                <time>2017.08.07</time>
+                                <span> 진료메모 있음.</span>
+                            </div>
+                            <div class="row">
+                                <time>2017.08.08</time>
+                                <span> 가나다라 마바사 </span>
+                            </div>
+                        </div>
+                        <!-- couple-->
+                        <label for="" class="blind">과거력 입력</label>
+                        <input type="text" id="" name=""  cols="30" rows="10" placeholder="입력해주세요" class="w-full bg-none" />
+                        <!--// couple-->
+                    </fieldset>
+                </section>
+                <!--// inc : 접수메모 -->
+
+                <!-- inc : 알레르기 -->
+                <header data-key="pane0_0_1_0" class="cm_panel_post_header row gradient-primary pdl-sm pdr-sm">
+                    <h3 class="cm_panel_post_title f-title-md bold c-dark">
+                        <span data-cm-tooltip="true" data-cm-tooltip-placement="bottom" data-cm-tooltip-theme="yellow" title="알레르기 정보조회">알레르기</span>
+                    </h3>
+                </header>
+                <section data-key="pane0_0_1_0" class="cm_panel_post h-full w-full bd-0">
+                    <div class="cm_panel_post_body cm_panel_post_body--gray" data-scroll="true">
+                        <div class="cm_panel_post_allergie pd-sm h-full">
+                            <!-- 약품 -->
+                            <dl class="col-12">
+                                <dt class="col-12">[약품]</dt>
+                                <dd class="row col-12 mb-xs">
+                                    <time class="col-4">* 2017.12.15</time>
+                                    <p class="col-8 pdl-sm">
+                                        <span class="cm_ico_badge cm_ico_badge--pink">의<span class="blind">심</span></span>
+                                        약품명
+                                    </p>
+                                    <p class="col-12 pdl-sm">famotidine</p>
+                                    <!-- 특이사항 -->
+                                    <p class="col-12 pdl-sm">(가려움, 부종 생김)</p>
+                                    <!--// 특이사항 -->
+                                </dd>
+                                <dd class="row col-12 mb-xs">
+                                    <time class="col-4">* 2017.12.14</time>
+                                    <p class="col-8 pdl-sm">
+                                        <span class="cm_ico_badge cm_ico_badge--red">확<span class="blind">정</span></span>
+                                        파모디틴정 <!-- 20mg(파모티딘)_(20mg/1정) /-->
+                                    </p>
+                                    <p class="col-12 pdl-sm">famotidine</p>
+                                    <!-- 특이사항 -->
+                                    <p class="col-12 pdl-sm">(가려움, 부종 생김)</p>
+                                    <!--// 특이사항 -->
+                                </dd>
+                            </dl>
+                            <!--// 약품 -->
+
+                            <!-- 식품 -->
+                            <dl class="row col-12">
+                                <dt class="col-12">[식품]</dt>
+                                <dd class="row col-12 mb-xs">
+                                    <time class="col-4">* 2017.12.15</time>
+                                    <p class="col-8 pdl-sm">
+                                        <span class="cm_ico_badge cm_ico_badge--red">확<span class="blind">정</span></span>
+                                        복숭아
+                                    </p>
+                                    <!-- 특이사항 -->
+                                    <p class="col-12 pdl-sm">(메스꺼움, 구토)</p>
+                                    <!--// 특이사항 -->
+                                </dd>
+                                <dd class="row col-12 mb-xs">
+                                    <time class="col-4">* 2017.12.14</time>
+                                    <p class="col-8 pdl-sm">
+                                        <span class="cm_ico_badge cm_ico_badge--pink">의<span class="blind">심</span></span>
+                                        복숭아
+                                    </p>
+                                    <!-- 특이사항 -->
+                                    <p class="col-12 pdl-sm">(메스꺼움, 구토)</p>
+                                    <!--// 특이사항 -->
+                                </dd>
+                            </dl>
+                            <!--// 식품 -->
+
+                            <!-- 기타 -->
+                            <dl class="row col-12">
+                                <dt class="col-12">[기타]</dt>
+                                <dd class="row col-12 mb-xs">
+                                    <time class="col-4">* 2017.12.15</time>
+                                    <p class="col-8 pdl-sm">
+                                        <span class="cm_ico_badge cm_ico_badge--pink">의<span class="blind">심</span></span>
+                                        먼지
+                                    </p>
+                                    <!-- 특이사항 -->
+                                    <p class="col-12 pdl-sm">(기타 특이사항 내용)</p>
+                                    <!--// 특이사항 -->
+                                </dd>
+                                <dd class="row col-12 mb-xs">
+                                    <time class="col-4">* 2017.12.14</time>
+                                    <p class="col-8 pdl-sm">
+                                        <span class="cm_ico_badge cm_ico_badge--red">확<span class="blind">정</span></span>
+                                        먼지
+                                    </p>
+                                    <!-- 특이사항 -->
+                                    <p class="col-12 pdl-sm">(특이사항: 콧물, 기침)</p>
+                                    <!--// 특이사항 -->
+                                </dd>
+                            </dl>
+                            <!--// 기타 -->
+                        </div>
+                    </div>
+                </section>
+                <!--// inc : 알레르기 -->
+
+                <!-- inc : 과거력 -->
+                <header data-key="pane0_0_1_1" class="cm_panel_post_header row gradient-primary pdl-sm pdr-sm">
+                    <h3 class="cm_panel_post_title f-title-md bold c-dark">
+                        <span data-cm-tooltip="true" data-cm-tooltip-placement="bottom" data-cm-tooltip-theme="yellow" title="과거력 등록 및 관리">과거력</span>
+                        <button type="button" class="cm_btn_compact is_active" data-cm-tooltip="true" data-cm-tooltip-placement="bottom" data-cm-tooltip-theme="yellow" title="묶음과거력 내용">묶음과거력</button>
+                    </h3>
+                </header>
+                <section data-key="pane0_0_1_1" class="cm_panel_post bd-0 h-full w-full" >
+                    <fieldset class="cm_panel_post_body cm_panel_post_body--gray" data-scroll="true">
+                        <legend class="blind">과거력</legend>
+                        <div class="cm_panel_post_history">
+                            <div class="row">
+                                <time>2017.08.05</time>
+                                `									<span> 과거력 있음.</span>
+                            </div>
+                            <div class="row">
+                                <time>2017.08.06</time>
+                                <span> 과거력 있음.</span>
+                            </div>
+                            <div class="row">
+                                <time>2017.08.07</time>
+                                <span> 과거력 있음.</span>
+                            </div>
+                            <div class="row">
+                                <time>2017.08.08</time>
+                                <span> 가나다라 마바사 아자카타파하 가나다라 마바사 아자카타파하 가나다라 마바사 아자카타파하</span>
+                            </div>
+                        </div>
+                        <!-- couple-->
+                        <label for="" class="blind">과거력 입력</label>
+                        <input type="text" id="" name=""  cols="30" rows="10" placeholder="입력해주세요" class="w-full bg-none" />
+                        <!--// couple-->
+                    </fieldset>
+                </section>
+                <!--// inc : 과거력 -->
+
+                <!-- inc: 과거차트, 병리검사, 방사선, 예방접종, 약, 묶음처방  -->
+                <header data-key="pane0_0_2_0" class="cm_panel_post_header row gradient-primary pdl-sm pdr-sm">
+                    <h3 class="cm_panel_post_title f-title-md bold c-dark">
+                        <span data-cm-tooltip="true" data-cm-tooltip-placement="bottom" data-cm-tooltip-theme="yellow" title="과거차트 조회">과거차트</span>
+                    </h3>
+                </header>
+                <section data-key="pane0_0_2_0" class="cm_panel_post cm_panel_post--synthesize row col-12 h-full bd-0">
+                    <!-- 과거차트 -->
+                    <fieldset class="h-full w-full" data-scroll="true">
+                        <legend class="blind">차트 조회</legend>
+
+                        <div class="cm_panel_diag-history_option pd-sm">
+                            <!-- 전체 -->
+                            <div class="cm_checkbox_circle vm is_active">
+                                <input type="checkbox" id="" name="" class="blind"/>
+                            </div>
+                            <label for="" class="mr-xs">전체</label>
+                            <!--// 전체 -->
+
+                            <!-- 진단 -->
+                            <div class="cm_checkbox_circle vm">
+                                <input type="checkbox" id="" name="" class="blind"/>
+                            </div>
+                            <label for="" class="mr-xs">진단</label>
+                            <!--// 진단 -->
+
+                            <!-- 증상 -->
+                            <div class="cm_checkbox_circle vm">
+                                <input type="checkbox" id="" name="" class="blind"/>
+                            </div>
+                            <label for="" class="mr-xs">증상</label>
+                            <!--// 증상 -->
+
+                            <!-- 검사 -->
+                            <div class="cm_checkbox_circle vm">
+                                <input type="checkbox" id="" name="" class="blind"/>
+                            </div>
+                            <label for="" class="mr-xs">검사</label>
+                            <!--// 검사 -->
+
+                            <!-- 처방 -->
+                            <div class="cm_checkbox_circle vm">
+                                <input type="checkbox" id="" name="" class="blind"/>
+                            </div>
+                            <label for="" class="mr-xs">처방</label>
+                            <!--// 처방 -->
+                        </div>
+
+                        <div class="cm_panel_diag-history_content" data-scroll="false">
+                            <!-- 차트기록 -->
+                            <div class="cm_panel_date-record is_active ">
+                                <!-- 차트 소그룹 -->
+                                <div class="cm_panel_date-record_group clearfix mb-sm pd-xs">
+                                    <button type="button" class="cm_btnico_send fl mt-xs">전송</button>
+                                    <!-- 차트 내용 묶음  -->
+                                    <div class="cm_panel_record_wrap fl ml-xs">
+                                        <!-- 차트 기록 -->
+                                        <div class="cm_panel_record">
+                                            <label for="" class="cm_checkbox_circle">
+                                                <input type="checkbox" id="" name="" value="" class="blind"/>
+                                            </label>
+
+                                            <!-- 코드 -->
+                                            <label for="">
+                                                <span class="blind">코드</span>
+                                                <input type="text"  id="" name="" value="A000000" class="cm_ipttxt_code"  />
+                                            </label>
+                                            <!--// 코드 -->
+
+                                            <div>상세불명의 급성 하기도 감염</div>
+                                        </div>
+                                        <!--// 차트 기록 -->
+
+                                        <!-- 차트 기록 -->
+                                        <div class="cm_panel_record">
+                                            <label for="" class="cm_checkbox_circle">
+                                                <input type="checkbox" id="" name="" value="" class="blind"/>
+                                            </label>
+
+                                            <!-- 코드 -->
+                                            <label for="" class="blind">코드</label>
+                                            <input type="text"  id="" name="" value="A000000" class="cm_ipttxt_code" readonly="readonly"/>
+                                            <!--// 코드 -->
+
+                                            <div>식도염을 동반한 위식도역류병</div>
+                                        </div>
+                                        <!--// 차트 기록 -->
+
+                                        <!-- 차트 기록 -->
+                                        <div class="cm_panel_record">
+                                            <label for="" class="cm_checkbox_circle">
+                                                <input type="checkbox" id="" name="" value="" class="blind"/>
+                                            </label>
+
+                                            <!-- 코드 -->
+                                            <label for="" class="blind">코드</label>
+                                            <input type="text"  id="" name="" value="A000000" class="cm_ipttxt_code" readonly="readonly"/>
+                                            <!--// 코드 -->
+
+                                            <div>출혈 또는 천공이 없는 만성십이지장염</div>
+                                        </div>
+                                        <!--// 차트 기록 -->
+                                    </div>
+                                    <!--// 차트 내용 묶음  -->
+                                </div>
+                                <!--// 차트 소그룹 -->
+                                <!-- 기록 박스 -->
+                                <div class="cm_panel_date-record-box">
+                                    <div class="cm_panel_date-record_header row pd-xs">
+                                        <div class="col-10">
+                                            <button type="button" class="cm_btnico_record mr-xs">
+                                                차트조회 열기
+                                            </button>
+                                            <time>
+                                                2017.10.27
+                                                <span>19:30:33</span>
+                                            </time>
+                                            <!-- couple-->
+                                            <span class="cm_ico_badge cm_ico_badge--pink corner-half" data-cm-tooltip="true"  data-cm-tooltip-theme="yellow" data-cm-tooltip-target=".cm_tooltip_primary--addtime" data-cm-tooltip-placement="bottom">가</span>
+
+                                            <div class="cm_tooltip_primary cm_tooltip_primary--addtime">
+                                                <div class="cm_tooltip_primary_inner">
+                                                    <dl>
+                                                        <dt class="fw-bold">가산</dt>
+                                                        <dd>
+                                                            <span class="c-attention">* 심 야</span> 평일 am 9시 이전, pm 6시 이후
+                                                        </dd>
+                                                        <dd>
+                                                            <span class="c-attention">* 토, 일, 공휴일</span> am 9시 이전, pm 1시 이후
+                                                        </dd>
+                                                    </dl>
+                                                </div>
+                                            </div>
+                                            <!--// couple-->
+                                            <span class="cm_panel_date-record_name">[Dr.홍길동]</span>
+                                            <button type="button">
+                                                <span class="cm_ico_badge cm_ico_badge--green pdl-xs pdr-xs">PACS</span>
+                                            </button>
+                                        </div>
+
+                                        <div class="col-2 ar">
+                                            <button type="button" class="cm_btnico_utils2 cm_btnico_utils2--print">프린터 출력</button>
+                                        </div>
+                                    </div>
+
+                                    <div class="cm_panel_date-record_content pd-xs">
+                                        <!-- 차트 소그룹 -->
+                                        <div class="cm_panel_date-record_group clearfix mb-sm">
+                                            <button type="button" class="cm_btnico_send fl mt-xs">전송</button>
+                                            <!-- 차트 내용 묶음  -->
+                                            <div class="cm_panel_record_wrap fl ml-xs">
+                                                <!-- 차트 기록 -->
+                                                <div class="cm_panel_record">
+                                                    <label for="" class="cm_checkbox_circle">
+                                                        <input type="checkbox" id="" name="" value="" class="blind"/>
+                                                    </label>
+
+                                                    <!-- 코드 -->
+                                                    <label for="" class="blind">코드</label>
+                                                    <input type="text"  id="" name="" value="A000000" class="cm_ipttxt_code" readonly="readonly"/>
+                                                    <!--// 코드 -->
+
+                                                    <div>Headache(+)</div>
+                                                </div>
+                                                <!--// 차트 기록 -->
+
+                                                <!-- 차트 기록 -->
+                                                <div class="cm_panel_record">
+                                                    <label for="" class="cm_checkbox_circle">
+                                                        <input type="checkbox" id="" name="" value="" class="blind"/>
+                                                    </label>
+
+                                                    <!-- 코드 -->
+                                                    <label for="" class="blind">코드</label>
+                                                    <input type="text"  id="" name="" value="A000000" class="cm_ipttxt_code" readonly="readonly"/>
+                                                    <!--// 코드 -->
+
+                                                    <div>기침호전</div>
+                                                </div>
+                                                <!--// 차트 기록 -->
+                                            </div>
+                                            <!--// 차트 내용 묶음  -->
+                                        </div>
+                                        <!--// 차트 소그룹 -->
+
+                                        <!-- 차트 소그룹 -->
+                                        <div class="cm_panel_date-record_group clearfix mb-sm">
+                                            <button type="button" class="cm_btnico_send fl mt-xs">전송</button>
+
+                                            <div class="cm_panel_record_wrap fl ml-xs">
+                                                <div class="cm_panel_record">
+                                                    <label for="" class="cm_checkbox_circle">
+                                                        <input type="checkbox" id="" name="" value="" class="blind"/>
+                                                    </label>
+
+                                                    <!-- 코드 -->
+                                                    <label for="" class="blind">코드</label>
+                                                    <input type="text"  id="" name="" value="A000000" class="cm_ipttxt_code" readonly="readonly"/>
+                                                    <!--// 코드 -->
+                                                    <div>포폴주사 20ml(iv)</div>
+                                                </div>
+
+                                                <div class="cm_panel_record fl">
+                                                    <label for="" class="cm_checkbox_circle">
+                                                        <input type="checkbox" id="" name="" value="" class="blind"/>
+                                                    </label>
+
+                                                    <!-- 코드 -->
+                                                    <label for="" class="blind">코드</label>
+                                                    <input type="text"  id="" name="" value="A000000" class="cm_ipttxt_code" readonly="readonly"/>
+                                                    <!--// 코드 -->
+
+                                                    <div>중외생리식염주사액 500밀리리터</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--// 차트 소그룹 -->
+
+                                        <!-- 차트 소그룹 -->
+                                        <div class="cm_panel_date-record_group clearfix mb-sm">
+                                            <button type="button" class="cm_btnico_send fl mt-xs">전송</button>
+
+                                            <!-- 차트 내용 묶음  -->
+                                            <div class="cm_panel_record_wrap fl ml-xs">
+
+                                                <!-- 차트 기록 -->
+                                                <div class="cm_panel_record">
+                                                    <label for="" class="cm_checkbox_circle">
+                                                        <input type="checkbox" id="" name="" value="" class="blind"/>
+                                                    </label>
+
+                                                    <!-- 코드 -->
+                                                    <label for="" class="blind">코드</label>
+                                                    <input type="text"  id="" name="" value="A000000" class="cm_ipttxt_code" readonly="readonly"/>
+                                                    <!--// 코드 -->
+                                                    <div class="">
+                                                        생검용 FORCEP
+                                                        <span class="cm_ico_badge cm_ico_badge--gray corner-half">M</span>
+                                                    </div>
+                                                </div>
+                                                <!--// 차트 기록 -->
+
+                                                <!-- 차트 기록 -->
+                                                <div class="cm_panel_record">
+                                                    <label for="" class="cm_checkbox_circle">
+                                                        <input type="checkbox" id="" name="" value="" class="blind"/>
+                                                    </label>
+
+                                                    <!-- 코드 -->
+                                                    <label for="" class="blind">코드</label>
+                                                    <input type="text"  id="" name="" value="A000000" class="cm_ipttxt_code" readonly="readonly"/>
+                                                    <!--// 코드 -->
+                                                    <div>
+                                                        COLOR PRINT PAPER 전규격
+                                                    </div>
+                                                </div>
+                                                <!--// 차트 기록 -->
+                                            </div>
+                                            <!--// 차트 내용 묶음  -->
+                                        </div>
+                                        <!--// 차트 소그룹 -->
+
+                                        <!-- 차트 소그룹 -->
+                                        <div class="cm_panel_date-record_group clearfix mb-sm">
+                                            <button type="button" class="cm_btnico_send fl mt-xs">전송</button>
+
+                                            <!-- 차트 내용 묶음  -->
+                                            <div class="cm_panel_record_wrap fl ml-xs">
+                                                <!-- 차트 기록 -->
+                                                <div class="cm_panel_record">
+                                                    <label for="" class="cm_checkbox_circle">
+                                                        <input type="checkbox" id="" name="" value="" class="blind"/>
+                                                    </label>
+
+                                                    <!-- 코드 -->
+                                                    <label for="" class="blind">코드</label>
+                                                    <input type="text"  id="" name="" value="A000000" class="cm_ipttxt_code" readonly="readonly"/>
+                                                    <!--// 코드 -->
+
+                                                    <div>뮤코라민정, 용량: 1, 일투: 1, 일수: 1, 원외, 급여: 급 </div>
+                                                </div>
+                                                <!--// 차트 기록 -->
+
+                                                <!-- 차트 기록 -->
+                                                <div class="cm_panel_record">
+                                                    <label for="" class="cm_checkbox_circle">
+                                                        <input type="checkbox" id="" name="" value="" class="blind"/>
+                                                    </label>
+
+                                                    <!-- 코드 -->
+                                                    <label for="" class="blind">코드</label>
+                                                    <input type="text"  id="" name="" value="A000000" class="cm_ipttxt_code" readonly="readonly"/>
+                                                    <!--// 코드 -->
+                                                    <div> 휴모사정, 용량: 1, 일투: 1, 일수: 1, 원외, 급여: 급 </div>
+                                                </div>
+                                                <!--// 차트 기록 -->
+                                            </div>
+                                            <!--// 차트 내용 묶음  -->
+                                        </div>
+                                        <!--// 차트 소그룹 -->
+                                    </div>
+                                </div>
+                                <!--// 기록 박스 -->
+                            </div>
+                            <!--// 차트기록 -->
+                        </div>
+
+                        <div class="cm_panel_diag-history_content" data-scroll="false">
+
+                            <!-- 차트기록 -->
+                            <div class="cm_panel_date-record is_active">
+                                <!-- 기록 박스 -->
+                                <div class="cm_panel_date-record-box">
+                                    <div class="cm_panel_date-record_header row pd-xs">
+                                        <div class="col-10">
+                                            <button type="button" class="cm_btnico_record mr-xs">
+                                                차트조회 열기
+                                            </button>
+                                            <time>
+                                                2017.10.27
+                                                <span>19:30:33</span>
+                                            </time>
+                                            <!-- couple-->
+                                            <span class="cm_ico_badge cm_ico_badge--pink corner-half" data-cm-tooltip="true"  data-cm-tooltip-theme="yellow" data-cm-tooltip-target=".cm_tooltip_primary--addtime" data-cm-tooltip-placement="bottom">가</span>
+
+                                            <div class="cm_tooltip_primary cm_tooltip_primary--addtime">
+                                                <div class="cm_tooltip_primary_inner">
+                                                    <dl>
+                                                        <dt class="fw-bold">가산</dt>
+                                                        <dd>
+                                                            <span class="c-attention">* 심 야</span> 평일 am 9시 이전, pm 6시 이후
+                                                        </dd>
+                                                        <dd>
+                                                            <span class="c-attention">* 토, 일, 공휴일</span> am 9시 이전, pm 1시 이후
+                                                        </dd>
+                                                    </dl>
+                                                </div>
+                                            </div>
+                                            <!--// couple-->
+                                            <span class="cm_panel_date-record_name">[Dr.홍길동]</span>
+                                            <button type="button">
+                                                <span class="cm_ico_badge cm_ico_badge--green pdl-xs pdr-xs">PACS</span>
+                                            </button>
+                                        </div>
+
+                                        <div class="col-2 ar">
+                                            <button type="button" class="cm_btnico_utils2 cm_btnico_utils2--print">프린터 출력</button>
+                                        </div>
+                                    </div>
+
+                                    <div class="cm_panel_date-record_content pd-xs">
+                                        <!-- 차트 소그룹 -->
+                                        <div class="cm_panel_date-record_group clearfix mb-sm">
+                                            <button type="button" class="cm_btnico_send fl mt-xs">전송</button>
+                                            <!-- 차트 내용 묶음  -->
+                                            <div class="cm_panel_record_wrap fl ml-xs">
+                                                <!-- 차트 기록 -->
+                                                <div class="cm_panel_record">
+                                                    <label for="" class="cm_checkbox_circle">
+                                                        <input type="checkbox" id="" name="" value="" class="blind"/>
+                                                    </label>
+
+                                                    <!-- 코드 -->
+                                                    <label for="" class="blind">코드</label>
+                                                    <input type="text"  id="" name="" value="A000000" class="cm_ipttxt_code" readonly="readonly"/>
+                                                    <!--// 코드 -->
+
+                                                    <div>Headache(+)</div>
+                                                </div>
+                                                <!--// 차트 기록 -->
+
+                                                <!-- 차트 기록 -->
+                                                <div class="cm_panel_record">
+                                                    <label for="" class="cm_checkbox_circle">
+                                                        <input type="checkbox" id="" name="" value="" class="blind"/>
+                                                    </label>
+
+                                                    <!-- 코드 -->
+                                                    <label for="" class="blind">코드</label>
+                                                    <input type="text"  id="" name="" value="A000000" class="cm_ipttxt_code" readonly="readonly"/>
+                                                    <!--// 코드 -->
+
+                                                    <div>기침호전</div>
+                                                </div>
+                                                <!--// 차트 기록 -->
+                                            </div>
+                                            <!--// 차트 내용 묶음  -->
+                                        </div>
+                                        <!--// 차트 소그룹 -->
+
+                                        <!-- 차트 소그룹 -->
+                                        <div class="cm_panel_date-record_group clearfix mb-sm">
+                                            <button type="button" class="cm_btnico_send fl mt-xs">전송</button>
+
+                                            <div class="cm_panel_record_wrap fl ml-xs">
+                                                <div class="cm_panel_record">
+                                                    <label for="" class="cm_checkbox_circle">
+                                                        <input type="checkbox" id="" name="" value="" class="blind"/>
+                                                    </label>
+
+                                                    <!-- 코드 -->
+                                                    <label for="" class="blind">코드</label>
+                                                    <input type="text"  id="" name="" value="A000000" class="cm_ipttxt_code" readonly="readonly"/>
+                                                    <!--// 코드 -->
+                                                    <div>포폴주사 20ml(iv)</div>
+                                                </div>
+
+                                                <div class="cm_panel_record fl">
+                                                    <label for="" class="cm_checkbox_circle">
+                                                        <input type="checkbox" id="" name="" value="" class="blind"/>
+                                                    </label>
+
+                                                    <!-- 코드 -->
+                                                    <label for="" class="blind">코드</label>
+                                                    <input type="text"  id="" name="" value="A000000" class="cm_ipttxt_code" readonly="readonly"/>
+                                                    <!--// 코드 -->
+
+                                                    <div>중외생리식염주사액 500밀리리터</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--// 차트 소그룹 -->
+
+                                        <!-- 차트 소그룹 -->
+                                        <div class="cm_panel_date-record_group clearfix mb-sm">
+                                            <button type="button" class="cm_btnico_send fl mt-xs">전송</button>
+
+                                            <!-- 차트 내용 묶음  -->
+                                            <div class="cm_panel_record_wrap fl ml-xs">
+
+                                                <!-- 차트 기록 -->
+                                                <div class="cm_panel_record">
+                                                    <label for="" class="cm_checkbox_circle">
+                                                        <input type="checkbox" id="" name="" value="" class="blind"/>
+                                                    </label>
+
+                                                    <!-- 코드 -->
+                                                    <label for="" class="blind">코드</label>
+                                                    <input type="text"  id="" name="" value="A000000" class="cm_ipttxt_code" readonly="readonly"/>
+                                                    <!--// 코드 -->
+                                                    <div class="">
+                                                        생검용 FORCEP
+                                                        <span class="cm_ico_badge cm_ico_badge--gray corner-half">M</span>
+                                                    </div>
+                                                </div>
+                                                <!--// 차트 기록 -->
+
+                                                <!-- 차트 기록 -->
+                                                <div class="cm_panel_record">
+                                                    <label for="" class="cm_checkbox_circle">
+                                                        <input type="checkbox" id="" name="" value="" class="blind"/>
+                                                    </label>
+
+                                                    <!-- 코드 -->
+                                                    <label for="" class="blind">코드</label>
+                                                    <input type="text"  id="" name="" value="A000000" class="cm_ipttxt_code" readonly="readonly"/>
+                                                    <!--// 코드 -->
+                                                    <div>
+                                                        COLOR PRINT PAPER 전규격
+                                                    </div>
+                                                </div>
+                                                <!--// 차트 기록 -->
+                                            </div>
+                                            <!--// 차트 내용 묶음  -->
+                                        </div>
+                                        <!--// 차트 소그룹 -->
+
+                                        <!-- 차트 소그룹 -->
+                                        <div class="cm_panel_date-record_group clearfix mb-sm">
+                                            <button type="button" class="cm_btnico_send fl mt-xs">전송</button>
+
+                                            <!-- 차트 내용 묶음  -->
+                                            <div class="cm_panel_record_wrap fl ml-xs">
+                                                <!-- 차트 기록 -->
+                                                <div class="cm_panel_record">
+                                                    <label for="" class="cm_checkbox_circle">
+                                                        <input type="checkbox" id="" name="" value="" class="blind"/>
+                                                    </label>
+
+                                                    <!-- 코드 -->
+                                                    <label for="" class="blind">코드</label>
+                                                    <input type="text"  id="" name="" value="A000000" class="cm_ipttxt_code" readonly="readonly"/>
+                                                    <!--// 코드 -->
+
+                                                    <div>뮤코라민정, 용량: 1, 일투: 1, 일수: 1, 원외, 급여: 급 </div>
+                                                </div>
+                                                <!--// 차트 기록 -->
+
+                                                <!-- 차트 기록 -->
+                                                <div class="cm_panel_record">
+                                                    <label for="" class="cm_checkbox_circle">
+                                                        <input type="checkbox" id="" name="" value="" class="blind"/>
+                                                    </label>
+
+                                                    <!-- 코드 -->
+                                                    <label for="" class="blind">코드</label>
+                                                    <input type="text"  id="" name="" value="A000000" class="cm_ipttxt_code" readonly="readonly"/>
+                                                    <!--// 코드 -->
+                                                    <div> 휴모사정, 용량: 1, 일투: 1, 일수: 1, 원외, 급여: 급 </div>
+                                                </div>
+                                                <!--// 차트 기록 -->
+                                            </div>
+                                            <!--// 차트 내용 묶음  -->
+                                        </div>
+                                        <!--// 차트 소그룹 -->
+                                    </div>
+                                </div>
+                                <!--// 기록 박스 -->
+                            </div>
+                            <!--// 차트기록 -->
+                        </div>
+                    </fieldset>
+                </section>
+                <!--// 과거차트 -->
+
+                <!-- 묶음 처방 -->
+                <header data-key="pane0_0_2_5" class="cm_panel_post_header row gradient-primary pdl-sm pdr-sm">
+                    <h3 class="cm_panel_post_title f-title-md bold c-dark">
+                        <span data-cm-tooltip="true" data-cm-tooltip-placement="bottom" data-cm-tooltip-theme="yellow" title="묶음처방 조회">묶음처방</span>
+                    </h3>
+                </header>
+                <section data-key="pane0_0_2_5" class="cm_panel_post cm_panel_post--synthesize row col-12 h-full bd-0">
+                    <fieldset class="cm_panel_set-grp w-full" data-scroll="true">
+                        <legend class="blind">묶음처방목록</legend>
+                        <div class="cm_panel_set-grp_mayjorkey gradient-primary pdt-xs pdl-xs pdr-xs">
+                            <button type="button" class="cm_btn_compact cm_btn_compact--green is_active mb-xs">일반처치</button>
+                            <button type="button" class="cm_btn_compact cm_btn_compact--green mb-xs">약처방 처리</button>
+                            <button type="button" class="cm_btn_compact cm_btn_compact--green mb-xs">내시경 특수검사</button>
+                            <button type="button" class="cm_btn_compact cm_btn_compact--green mb-xs">심장 특수검사</button>
+                            <button type="button" class="cm_btn_compact cm_btn_compact--green mb-xs">기타 특수검사</button>
+                            <button type="button" class="cm_btn_compact cm_btn_compact--green mb-xs">기타 특수검사</button>
+                            <button type="button" class="cm_btn_compact cm_btn_compact--green mb-xs">기타 특수검사</button>
+                            <button type="button" class="cm_btn_compact cm_btn_compact--green mb-xs">
+                                <input type="text" id="" name="" value="+ 새분류" class="bg-none">
+                            </button>
+                            <button type="button" class="cm_btnico_reg vm mb-xs">
+                                <span class="blind">등록</span>
+                            </button>
+                        </div>
+                        <!-- 대분류 -->
+                        <div class="cm_panel_date-record is_active">
+                            <!-- 기록 박스 -->
+                            <div class="cm_panel_date-record-box">
+                                <div class="cm_panel_date-record_header row pd-xs">
+                                    <div class="col-10">
+                                        <button type="button" class="cm_btnico_record cm_btnico_record--horz mr-xs" disabled="disabled">
+                                            차트조회 열기
+                                        </button>
+
+                                        <span class="c-grp">
+                                                        묶음명1
+                                                    </span>
+                                    </div>
+
+                                    <div class="col-2 ar">
+                                        <button type="button" class="cm_btnico_utils2 cm_btnico_utils2--print">프린터 출력</button>
+                                    </div>
+                                </div>
+
+                                <div class="cm_panel_date-record_content active pd-xs">
+                                    <!-- 차트 소그룹 -->
+                                    <div class="cm_panel_date-record_group clearfix mb-sm">
+                                        <!-- 차트 내용 묶음  -->
+                                        <div class="cm_panel_record_wrap fl ml-xs">
+                                            <!-- 묶음명 -->
+                                            <div class="cm_panel_record">
+
+                                                <!-- 코드 -->
+                                                <label for="" class="blind">코드</label>
+                                                <input type="text"  id="" name="" value="A000000" class="cm_ipttxt_code" readonly="readonly"/>
+                                                <!--// 코드 -->
+
+                                                <div>묶음명</div>
+                                            </div>
+                                            <!--// 묶음명 -->
+
+                                            <!-- 묶음명 -->
+                                            <div class="cm_panel_record">
+                                                <!-- 코드 -->
+                                                <label for="" class="blind">코드</label>
+                                                <input type="text"  id="" name="" value="A000000" class="cm_ipttxt_code" readonly="readonly"/>
+                                                <!--// 코드 -->
+
+                                                <div>묶음명2</div>
+                                            </div>
+                                            <!--// 묶음명 -->
+                                        </div>
+                                        <!--// 차트 내용 묶음  -->
+                                    </div>
+                                    <!--// 차트 소그룹 -->
+                                </div>
+                            </div>
+                            <!--// 기록 박스 -->
+                        </div>
+                        <!--// 대분류 -->
+
+                        <!-- 세부 카테고리 -->
+                        <div class="cm_panel_date-record is_active">
+                            <!-- 기록 박스 -->
+                            <div class="cm_panel_date-record-box">
+                                <div class="cm_panel_date-record_header row pd-xs">
+                                    <div class="col-10">
+                                        <button type="button" class="cm_btnico_record cm_btnico_record--horz is_active mr-xs" disabled="disabled">
+                                            차트조회 열기
+                                        </button>
+
+                                        <span class="cm_panel_date-record_name">세부 카테고리명</span>
+                                    </div>
+                                </div>
+
+                                <div class="cm_panel_date-record_content pd-xs">
+                                    <!-- 차트 소그룹 -->
+                                    <div class="cm_panel_date-record_group clearfix mb-sm">
+                                        <button type="button" class="cm_btnico_send fl mt-xs">전송</button>
+                                        <!-- 차트 내용 묶음  -->
+                                        <div class="cm_panel_record_wrap fl ml-xs">
+                                            <!-- 차트 기록 -->
+                                            <div class="cm_panel_record">
+                                                <label for="" class="cm_checkbox_circle">
+                                                    <input type="checkbox" id="" name="" value="" class="blind"/>
+                                                </label>
+
+                                                <!-- 코드 -->
+                                                <label for="" class="blind">코드</label>
+                                                <input type="text"  id="" name="" value="A000000" class="cm_ipttxt_code" readonly="readonly"/>
+                                                <!--// 코드 -->
+
+                                                <div>Headache(+)</div>
+                                            </div>
+                                            <!--// 차트 기록 -->
+
+                                            <!-- 차트 기록 -->
+                                            <div class="cm_panel_record">
+                                                <label for="" class="cm_checkbox_circle">
+                                                    <input type="checkbox" id="" name="" value="" class="blind"/>
+                                                </label>
+
+                                                <!-- 코드 -->
+                                                <label for="" class="blind">코드</label>
+                                                <input type="text"  id="" name="" value="A000000" class="cm_ipttxt_code" readonly="readonly"/>
+                                                <!--// 코드 -->
+
+                                                <div>기침호전</div>
+                                            </div>
+                                            <!--// 차트 기록 -->
+                                        </div>
+                                        <!--// 차트 내용 묶음  -->
+                                    </div>
+                                    <!--// 차트 소그룹 -->
+
+                                </div>
+                            </div>
+                            <!--// 기록 박스 -->
+                        </div>
+                        <!--// 세부 카테고리 -->
+                    </fieldset>
+                </section>
+                <!--// 묶음 처방 -->
+                <!--// inc: 과거차트, 병리검사, 방사선, 예방접종, 약, 묶음처방  -->
+
+                <!-- inc : 증상 -->
+                <header data-key="pane0_1_0" class="cm_panel_post_header row gradient-primary pdl-sm pdr-sm">
+                    <h3 class="cm_panel_post_title f-title-md bold c-dark">증상</h3>
+                </header>
+                <section data-key="pane0_1_0" class="cm_panel_post cm_panel_post--symptom h-full bd-0">
+                    <button type="button" class="cm_btnico_collapse">상단 타이틀 접기</button>
+                    <fieldset  class="cm_panel_post_body">
+                        <legend class="blind">증상 입력</legend>
+                        <div class="table h-full">
+
+                            <!-- 상단 도구 모음 -->
+                            <div class="t-row">
+                                <div class="cm_panel_helper t-cell gradient-primary clearfix">
+                                    <div class="cm_panel_symptom-list fl col-8 pdl-md pdr-md">
+                                        <button type="button" class="cm_btn_compact">증상</button>
+                                        <button type="button" class="cm_btn_compact cm_btn_compact--green is_active">증상</button>
+                                    </div>
+
+                                    <div class="cm_panel_helper_util col-4 row fr ar">
+                                        <button type="button" class="cm_btnico_utils3 cm_btnico_utils3--unfld cm_btnico_utils3--symptom">묶음증상</button>
+
+                                        <div class="cm_btnico_utils4_wrap clearfix">
+                                            <button type="button" class="cm_btnico_utils4 cm_btnico_utils4--memo bdt-0 bdb-0 is_active">일반메모</button>
+                                            <button type="button" class="cm_btnico_utils4 cm_btnico_utils4--line bdt-0 bdb-0">줄메모</button>
+                                            <button type="button" class="cm_btnico_utils4 cm_btnico_utils4--img bdt-0 bdb-0 bdr-0">이미지</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--// 상단 도구 모음 -->
+
+                            <!-- 증상 목록 -->
+                            <div class="cm_panel_symptom-result t-row">
+                                <div class="t-cell box-case5 pdt-xs pdb-xs pdl-sm pdr-sm">
+                                    <div class="cm_panel_symptom-result_item">
+                                        <button type="button">[기침+]</button>
+                                        <button type="button">[기침++]</button>
+                                        <button type="button">[고열+ 고열 ++ 고열+++]</button>
+                                        <button type="button">[콧물+]</button>
+                                        <button type="button">[콧물++]</button>
+                                        <button type="button">[콧물+++]</button>
+                                        <button type="button">[기침+]</button>
+                                        <button type="button">[소화장애+ 소화장애++ 소화장애+++]</button>
+                                    </div>
+
+                                    <div class="cm_panel_symptom-result_item">
+                                        <button type="button">[고열+ 고열 ++ 고열+++]</button>
+                                        <button type="button">[콧물+]</button>
+                                        <button type="button">[콧물++]</button>
+                                        <button type="button">[콧물+++]</button>
+                                        <button type="button">[기침+]</button>
+                                        <button type="button">[소화장애+ 소화장애++ 소화장애+++]</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--// 증상 목록 -->
+
+                            <!-- 증상 입력란 -->
+                            <div class="t-row">
+
+                                <!-- 자유 입력란 -->
+                                <div class="cm_textarea_primary_wrap cm_textarea_primary_wrap--line t-cell clearfix ">
+                                    <div>
+                                        <!-- 입력란 -->
+                                        <label for="" class="blind">메모</label>
+                                        <textarea name="" id="" cols="30" rows="10" class="cm_textarea_primary col-8 fl bdl-0 bdb-0" placeholder="입력하세요."></textarea>
+                                        <!--// 입력란 -->
+                                    </div>
+                                    <div>
+                                        <!-- CRM -->
+                                        <label for="" class="blind">CRM 메모</label>
+                                        <textarea name="" id="" cols="30" rows="10" class="cm_textarea_primary col-4 fr bdr-0 bdb-0" placeholder="CRM을 입력하세요."></textarea>
+                                        <!--// CRM -->
+                                    </div>
+                                </div>
+                                <!--// 자유 입력란 -->
+
+                                <!-- 줄메모 -->
+                                <div class="cm_panel_linememo t-cell h-full pd-xs">
+                                    <div class="cm_panel_linememo_inner h-full scroll-y">
+                                        <div class="cm_panel_linememo_group">
+                                            <label for="" class="cm_checkbox_circle vm">
+                                                <input type="checkbox" class="blind">
+                                            </label>
+
+                                            <!-- 코드 -->
+                                            <label for="" class="blind">코드</label>
+                                            <input type="text" placeholder="0000000" class="cm_ipttxt_code bg-none vm">
+                                            <!--// 코드 -->
+
+                                            <!-- 증상 내용 -->
+                                            <label for="" class="blind">증상</label>
+                                            <input type="text" placeholder="증상 내용을 입력하세요." class="bg-none vm">
+                                            <!--// 증상 내용 -->
+                                        </div>
+
+                                        <div class="cm_panel_linememo_group">
+                                            <label for="" class="cm_checkbox_circle vm">
+                                                <input type="checkbox" class="blind">
+                                            </label>
+
+                                            <!-- 코드 -->
+                                            <label for="" class="blind">코드</label>
+                                            <input type="text" placeholder="0000000" class="cm_ipttxt_code bg-none vm">
+                                            <!--// 코드 -->
+
+                                            <!-- 증상 내용 -->
+                                            <label for="" class="blind">증상</label>
+                                            <input type="text" placeholder="증상 내용을 입력하세요." class="bg-none vm">
+                                            <!--// 증상 내용 -->
+                                        </div>
+                                        <div class="cm_panel_linememo_group">
+                                            <label for="" class="cm_checkbox_circle vm">
+                                                <input type="checkbox" class="blind">
+                                            </label>
+
+                                            <!-- 코드 -->
+                                            <label for="" class="blind">코드</label>
+                                            <input type="text" placeholder="0000000" class="cm_ipttxt_code bg-none vm">
+                                            <!--// 코드 -->
+
+                                            <!-- 증상 내용 -->
+                                            <label for="" class="blind">증상</label>
+                                            <input type="text" placeholder="증상 내용을 입력하세요." class="bg-none vm">
+                                            <!--// 증상 내용 -->
+                                        </div>
+                                        <div class="cm_panel_linememo_group">
+                                            <label for="" class="cm_checkbox_circle vm">
+                                                <input type="checkbox" class="blind">
+                                            </label>
+
+                                            <!-- 코드 -->
+                                            <label for="" class="blind">코드</label>
+                                            <input type="text" placeholder="0000000" class="cm_ipttxt_code bg-none vm">
+                                            <!--// 코드 -->
+
+                                            <!-- 증상 내용 -->
+                                            <label for="" class="blind">증상</label>
+                                            <input type="text" placeholder="증상 내용을 입력하세요." class="bg-none vm">
+                                            <!--// 증상 내용 -->
+                                        </div>
+                                        <div class="cm_panel_linememo_group">
+                                            <label for="" class="cm_checkbox_circle vm">
+                                                <input type="checkbox" class="blind">
+                                            </label>
+
+                                            <!-- 코드 -->
+                                            <label for="" class="blind">코드</label>
+                                            <input type="text" placeholder="0000000" class="cm_ipttxt_code bg-none vm">
+                                            <!--// 코드 -->
+
+                                            <!-- 증상 내용 -->
+                                            <label for="" class="blind">증상</label>
+                                            <input type="text" placeholder="증상 내용을 입력하세요." class="bg-none vm">
+                                            <!--// 증상 내용 -->
+                                        </div>
+                                        <div class="cm_panel_linememo_group">
+                                            <label for="" class="cm_checkbox_circle vm">
+                                                <input type="checkbox" class="blind">
+                                            </label>
+
+                                            <!-- 코드 -->
+                                            <label for="" class="blind">코드</label>
+                                            <input type="text" placeholder="0000000" class="cm_ipttxt_code bg-none vm">
+                                            <!--// 코드 -->
+
+                                            <!-- 증상 내용 -->
+                                            <label for="" class="blind">증상</label>
+                                            <input type="text" placeholder="증상 내용을 입력하세요." class="bg-none vm">
+                                            <!--// 증상 내용 -->
+                                        </div>
+                                        <div class="cm_panel_linememo_group">
+                                            <label for="" class="cm_checkbox_circle vm">
+                                                <input type="checkbox" class="blind">
+                                            </label>
+
+                                            <!-- 코드 -->
+                                            <label for="" class="blind">코드</label>
+                                            <input type="text" placeholder="0000000" class="cm_ipttxt_code bg-none vm">
+                                            <!--// 코드 -->
+
+                                            <!-- 증상 내용 -->
+                                            <label for="" class="blind">증상</label>
+                                            <input type="text" placeholder="증상 내용을 입력하세요." class="bg-none vm">
+                                            <!--// 증상 내용 -->
+                                        </div>
+                                        <div class="cm_panel_linememo_group">
+                                            <label for="" class="cm_checkbox_circle vm">
+                                                <input type="checkbox" class="blind">
+                                            </label>
+
+                                            <!-- 코드 -->
+                                            <label for="" class="blind">코드</label>
+                                            <input type="text" placeholder="0000000" class="cm_ipttxt_code bg-none vm">
+                                            <!--// 코드 -->
+
+                                            <!-- 증상 내용 -->
+                                            <label for="" class="blind">증상</label>
+                                            <input type="text" placeholder="증상 내용을 입력하세요." class="bg-none vm">
+                                            <!--// 증상 내용 -->
+                                        </div>
+                                        <div class="cm_panel_linememo_group">
+                                            <label for="" class="cm_checkbox_circle vm">
+                                                <input type="checkbox" class="blind">
+                                            </label>
+
+                                            <!-- 코드 -->
+                                            <label for="" class="blind">코드</label>
+                                            <input type="text" placeholder="0000000" class="cm_ipttxt_code bg-none vm">
+                                            <!--// 코드 -->
+
+                                            <!-- 증상 내용 -->
+                                            <label for="" class="blind">증상</label>
+                                            <input type="text" placeholder="증상 내용을 입력하세요." class="bg-none vm">
+                                            <!--// 증상 내용 -->
+                                        </div>
+                                        <div class="cm_panel_linememo_group">
+                                            <label for="" class="cm_checkbox_circle vm">
+                                                <input type="checkbox" class="blind">
+                                            </label>
+
+                                            <!-- 코드 -->
+                                            <label for="" class="blind">코드</label>
+                                            <input type="text" placeholder="0000000" class="cm_ipttxt_code bg-none vm">
+                                            <!--// 코드 -->
+
+                                            <!-- 증상 내용 -->
+                                            <label for="" class="blind">증상</label>
+                                            <input type="text" placeholder="증상 내용을 입력하세요." class="bg-none vm">
+                                            <!--// 증상 내용 -->
+                                        </div>
+                                        <div class="cm_panel_linememo_group">
+                                            <label for="" class="cm_checkbox_circle vm">
+                                                <input type="checkbox" class="blind">
+                                            </label>
+
+                                            <!-- 코드 -->
+                                            <label for="" class="blind">코드</label>
+                                            <input type="text" placeholder="0000000" class="cm_ipttxt_code bg-none vm">
+                                            <!--// 코드 -->
+
+                                            <!-- 증상 내용 -->
+                                            <label for="" class="blind">증상</label>
+                                            <input type="text" placeholder="증상 내용을 입력하세요." class="bg-none vm">
+                                            <!--// 증상 내용 -->
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <!--// 줄메모 -->
+                            </div>
+                            <!--// 증상 입력란 -->
+
+                            <!-- 기능 버튼 -->
+                            <div class="t-row">
+                                <div class="cm_panel_util t-cell clearfix box-case5 pd-xs bdl-0 bdr-0 bdb-0">
+                                    <div class="fl col-8">
+                                        <span class="c-note ellipsis">※ TXT를 선택이나 드래그하신후, 원하시는 버튼을 눌러주세요.</span>
+                                    </div>
+                                    <div class="fr col-4 ar">
+                                        <button type="button" class="cm_btnico_utils3 cm_btnico_utils3--save is_active"> 청구메모 저장</button>
+                                        <button type="button" class="cm_btnico_utils3 cm_btnico_utils3--sms">CRM 전송</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--// 기능 버튼 -->
+                        </div>
+                    </fieldset>
+                </section>
+                <!--// inc : 증상 -->
+
+                <!-- inc : 진단-->
+                <header data-key="pane0_1_1" class="cm_panel_post_header row gradient-primary pdl-sm pdr-sm">
+                    <h3 class="cm_panel_title f-title-md bold c-dark">진단</h3>
+                </header>
+                <section data-key="pane0_1_1" class="cm_panel_post h-full bd-0" >
+                    <fieldset class="cm_panel_post_body">
+                        <legend class="blind">진단 테이블</legend>
+                        <table class="cm_table_case2" data-cm-grid="true">
+                            <caption></caption>
+                            <colgroup>
+                                <col style="width: 30px"/>
+                                <col style="width: 60px"/>
+                                <col />
+                                <col style="width: 15px"/>
+                                <col style="width: 25px" />
+                                <col style="width: 50px" />
+                            </colgroup>
+                            <thead>
+                            <tr class="gradient-primary">
+                                <th class="bdb-primary ar">
+                                    <div class="pdr-xs">
+                                        <button type="button" data-cm-grid-all-select-button="true" class="cm_checkbox_check">체크박스</button>
+                                    </div>
+                                </th>
+                                <th class="bdb-primary"> 코드	<button type="button" class="cm_btnico_srch">코드검색</button></th>
+                                <th class="bdb-primary">
+                                    진단명
+                                    <button type="button" class="cm_btn_compact" disabled>전염병 신고</button>
+                                </th>
+                                <th class="bdb-primary">주</th>
+                                <th class="bdb-primary">R/O</th>
+                                <th class="bdb-primary">진료과</th>
+                            </tr>
+                            </thead>
+                            <tbody class="ac">
+                            <tr>
+                                <td data-cm-grid-cell-focus="false" data-cm-grid-cell-selected="false" class="ar pd-0">
+                                    <label for="" class="cm_checkbox_circle is_active">
+                                        선택
+                                        <input type="checkbox" class="blind"/>
+                                    </label>
+                                </td>
+                                <td data-cm-grid-cell-focus="false" data-cm-grid-cell-selected="false">
+                                    <label for="" class="blind">코드</label>
+                                    <input type="text" value="0000000" class="cm_ipttxt_code" readonly="readonly">
+                                </td>
+                                <td data-cm-grid-cell-focus="false" data-cm-grid-cell-selected="false" class="al">기타위염</td>
+                                <td data-cm-grid-cell-focus="false" data-cm-grid-cell-selected="false">Y</td>
+                                <td data-cm-grid-cell-focus="false" data-cm-grid-cell-selected="false">N</td>
+                                <td data-cm-grid-cell-focus="false" data-cm-grid-cell-selected="false">내과</td>
+                            </tr>
+                            <tr>
+                                <td data-cm-grid-cell-focus="false" data-cm-grid-cell-selected="false" class="ar pd-0">
+                                    <label for="" class="cm_checkbox_circle">
+                                        선택
+                                        <input type="checkbox" class="blind"/>
+                                    </label>
+                                </td>
+                                <td data-cm-grid-cell-focus="false" data-cm-grid-cell-selected="false">
+                                    <label for="" class="blind">코드</label>
+                                    <input type="text"  placeholder="0000000" class="cm_ipttxt_code">
+                                </td>
+                                <td data-cm-grid-cell-focus="false" data-cm-grid-cell-selected="false" class="al">
+                                    <label for="" data-cm-grid-cellholder="false">
+                                        <input type="text" placeholder="진단내용을 입력하세요.">
+                                    </label>
+                                </td>
+                                <td data-cm-grid-cell-focus="false" data-cm-grid-cell-selected="false"></td>
+                                <td data-cm-grid-cell-focus="false" data-cm-grid-cell-selected="false"></td>
+                                <td data-cm-grid-cell-focus="false" data-cm-grid-cell-selected="false"></td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </fieldset>
+                </section>
+                <!--// inc : 진단-->
+
+                <!-- inc : 처방-->
+                <header data-key="pane0_1_2" class="cm_panel_post_header row gradient-primary pdl-sm pdr-sm">
+                    <h3 class="f-title-md bold c-dark">처방</h3>
+                </header>
+                <section data-key="pane0_1_2" class="cm_panel_post h-full bd-0">
+                    <fieldset class="cm_panel_post_body">
+                        <legend class="blind">처방전 입력</legend>
+
+                        <table class="cm_table_case2" data-cm-grid="table">
+                            <caption class="blind">처방전</caption>
+                            <colgroup>
+                                <col style="width: 15px">
+                                <col style="width: 18px">
+                                <col style="width: 60px">
+                                <col>
+                                <col style="width: 25px">
+                                <col style="width: 25px">
+                                <col style="width: 25px">
+                                <col style="width: 25px">
+                                <col style="width: 25px">
+                                <col style="width: 25px">
+                                <col style="width: 15px">
+                            </colgroup>
+                            <thead>
+                            <tr class="gradient-primary ac">
+                                <th class="bdb-primary"><span class="blind">메모</span></th>
+                                <th class="bdb-primary">
+                                    <div class="pdr-xs">
+                                        <button type="button" data-cm-grid-all-select-button="true" class="cm_checkbox_check">체크박스</button>
+                                    </div>
+                                </th>
+                                <th class="bdb-primary">코드</th>
+                                <th class="bdb-primary">
+                                    처방명
+                                    <button type="button" class="cm_btn_compact is_active">메모전송</button>
+                                </th>
+                                <th class="bdb-primary">용량</th>
+                                <th class="bdb-primary">일투</th>
+                                <th class="bdb-primary">일수</th>
+                                <th class="bdb-primary">용법</th>
+                                <th class="bdb-primary">원외</th>
+                                <th class="bdb-primary">급여</th>
+                                <th class="bdb-primary">
+                                    <span class="blind">삭제</span>
+                                </th>
+                            </tr>
+                            </thead>
+                            <tbody class="ac">
+                            <!-- row -->
+                            <tr data-cm-grid-row-selected="false">
+                                <td data-cm-grid-cell-focus="false" data-cm-grid-cell-selected="false" class="pd-0">
+                                    <button type="button" class="cm_btn_txt cm_btn_txt--memo" data-cm-tooltip="false" data-cm-tooltip-placement="bottom" data-cm-tooltip-theme="yellow" title="">M<span class="blind">메모</span></button>
+                                </td>
+                                <td data-cm-grid-cell-focus="false" data-cm-grid-cell-selected="false" class="pd-0">
+                                    <label for="" class="cm_checkbox_circle" data-cm-grid-row-select-button="false">
+                                        선택
+                                        <input type="checkbox" id="" name="" class="blind">
+                                    </label>
+                                </td>
+                                <td data-cm-grid-cell-focus="false" data-cm-grid-cell-selected="false" class="pd-0">
+                                    <!-- 코드 -->
+                                    <label for="" class="blind">코드</label>
+                                    <input type="text" id="" name="" value="0000000" class="cm_ipttxt_code">
+                                    <!--// 코드 -->
+                                </td>
+                                <td data-cm-grid-cell-focus="false" data-cm-grid-cell-selected="false" class="al pd-0">
+                                    <!-- 처방명 -->
+                                    <label for="" class="blind">처방명</label>
+                                    <span data-cm-grid-cellholder="false" class="c-attention">
+                                                    <input type="text" id="" name="" value="비) A형간영항세(lgG)" placeholder="처방내용을 입력하세요." />
+                                                </span>
+                                    <!--// 처방명 -->
+                                </td>
+                                <td data-cm-grid-cell-focus="false" data-cm-grid-cell-selected="false">
+                                    <label for="" class="blind">용량</label>
+                                    <input type="" value="1" class="col-12 ar bg-none"/>
+                                </td>
+                                <td data-cm-grid-cell-focus="false" data-cm-grid-cell-selected="false">
+                                    <label for="" class="blind">일투</label>
+                                    <input type="" value="1" class="col-12 ar bg-none"/>
+                                </td>
+                                <td data-cm-grid-cell-focus="false" data-cm-grid-cell-selected="false">
+                                    <label for="" class="blind">일수</label>
+                                    <input type="" value="1" class="col-12 ar bg-none"/>
+                                </td>
+                                <td data-cm-grid-cell-focus="false" data-cm-grid-cell-selected="false" class="pd-0">
+                                    <label for="" class="blind">용법선택</label>
+                                    <input type="text" id="" name="" value="#1" class="col-12"/>
+                                </td>
+                                <td data-cm-grid-cell-focus="false" data-cm-grid-cell-selected="false" class="pd-0">
+                                    <label for="" class="cm_checkbox_check cm_checkbox_check--darkgray">
+                                        원외
+                                        <input type="checkbox" id="" name="" value="" class="blind" />
+                                    </label>
+                                </td>
+                                <td data-cm-grid-cell-focus="false" data-cm-grid-cell-selected="false"  class="c-attention pd-0">
+                                    <label for="" class="blind">급여 선택</label>
+                                    <input type="text" id="" name="" value="급" class="col-12"/>
+                                </td>
+                                <td data-cm-grid-cell-focus="false" data-cm-grid-cell-selected="false" class="pd-0">
+                                    <button type="button" class="cm_btnico_delete" data-cm-grid-row-delete-button="true">삭제</button>
+                                </td>
+                            </tr>
+                            <!--// row -->
+
+                            <!-- row -->
+                            <tr data-cm-grid-row-selected="false">
+                                <td data-cm-grid-cell-focus="false" data-cm-grid-cell-selected="false" class="pd-0">
+                                    <button type="button" class="cm_btn_txt cm_btn_txt--memo is_active" data-cm-tooltip="true" data-cm-tooltip-placement="bottom" data-cm-tooltip-theme="yellow" title="타의료기과에서 당뇨약 고지혈증약을 복용중인 환자로 약물 처방 위해 내원한 경우">M<span class="blind">메모</span></button>
+                                </td>
+                                <td data-cm-grid-cell-focus="false" data-cm-grid-cell-selected="false" class="pd-0">
+                                    <label for="" class="cm_checkbox_circle" data-cm-grid-row-select-button="false">
+                                        선택
+                                        <input type="checkbox" id="" name="" class="blind">
+                                    </label>
+                                </td>
+                                <td data-cm-grid-cell-focus="false" data-cm-grid-cell-selected="false" class="pd-0">
+                                    <!-- 코드 -->
+                                    <label for="" class="blind">코드</label>
+                                    <input type="text" id="" name="" value="0000000" class="cm_ipttxt_code">
+                                    <!--// 코드 -->
+                                </td>
+                                <td data-cm-grid-cell-focus="false" data-cm-grid-cell-selected="false" class="al pd-0">
+                                    <!-- 처방명 -->
+                                    <label for="" class="blind">처방명</label>
+                                    <span data-cm-grid-cellholder="false">
+                                                    <input type="text" id="" name="" value="뮤코라민정" placeholder="처방내용을 입력하세요." />
+                                                </span>
+                                    <!--// 처방명 -->
+
+                                    <a href="#" class="cm_btn_attention" data-cm-tooltip="true" data-cm-tooltip-placement="right" data-cm-tooltip-theme="darkgreen" title="3개월 후 예약">예약</a>
+                                </td>
+                                <td data-cm-grid-cell-focus="false" data-cm-grid-cell-selected="false">
+                                    <label for="" class="blind">용량</label>
+                                    <input type="" value="1" class="col-12 ar bg-none"/>
+                                </td>
+                                <td data-cm-grid-cell-focus="false" data-cm-grid-cell-selected="false">
+                                    <label for="" class="blind">일투</label>
+                                    <input type="" value="1" class="col-12 ar bg-none"/>
+                                </td>
+                                <td data-cm-grid-cell-focus="false" data-cm-grid-cell-selected="false">
+                                    <label for="" class="blind">일수</label>
+                                    <input type="" value="1" class="col-12 ar bg-none"/>
+                                </td>
+                                <td data-cm-grid-cell-focus="false" data-cm-grid-cell-selected="false" class="pd-0">
+                                    <label for="" class="blind">용법선택</label>
+                                    <input type="text" id="" name="" value="#1" class="col-12"/>
+                                </td>
+                                <td data-cm-grid-cell-focus="false" data-cm-grid-cell-selected="false" class="pd-0">
+                                    <label for="" class="cm_checkbox_check cm_checkbox_check--darkgray is_active">
+                                        원외
+                                        <input type="checkbox" id="" name="" value="" class="blind" />
+                                    </label>
+                                </td>
+                                <td data-cm-grid-cell-focus="false" data-cm-grid-cell-selected="false" class="c-attention pd-0">
+                                    <label for="" class="blind">급여 선택</label>
+                                    <input type="text" id="" name="" value="비" class="c-attention col-12"/>
+                                </td>
+                                <td data-cm-grid-cell-focus="false" data-cm-grid-cell-selected="false" class="ar">
+                                    <button type="button" class="cm_btnico_delete" data-cm-grid-row-delete-button="true">삭제</button>
+                                </td>
+                            </tr>
+                            <!--// row -->
+                            </tbody>
+                        </table>
+                    </fieldset>
+                </section>
+                <!--// inc : 처방-->
+                <!-- inc : 청구-->
+                <header data-key="pane0_1_3" class="cm_panel_post_header row gradient-primary pdl-sm pdr-sm">
+                    <!-- 제목 -->
+                    <h3 class="cm_panel_post_title f-title-md bold c-dark">청구메모</h3>
+                    <!--// 제목 -->
+                </header>
+                <section data-key="pane0_1_3" class="cm_panel_post h-full bd-0" style="height:60px;">
+                    <fieldset class="cm_panel_post_body cm_panel_post_body--charge">
+                        <legend class="blind">청구메모 입력</legend>
+                        <div class="row box-case4 h-full">
+                            <label for="" class="blind"></label>
+                            <input type="text" id="" name="" class="col-3 bg-none" placeholder="코드번호" />
+
+                            <label for="" class="blind"></label>
+                            <input type="text" id="" name="" class="col-9 bdl-primary bg-none" placeholder="내용을 입력하세요."/>
+                        </div>
+                    </fieldset>
+                </section>
+                <!--// inc : 청구-->
+            </section>
+            <!--// ax5docker-pane section -->
+            <div id="panebtn1">
+                <button type="button" class="cm_btnico_utils2 cm_btnico_utils2--set" data-cm-tooltip="true" data-cm-tooltip-placement="bottom" data-cm-tooltip-theme="darkgreen" title="" style="position: relative;">설정</button>
+                <button type="button" class="cm_btnico_utils2 cm_btnico_utils2--min" data-cm-tooltip="true" data-cm-tooltip-placement="bottom" data-cm-tooltip-theme="darkgreen" title="" style="position: relative;">창축소</button>
+                <!-- <button type="button" class="cm_btnico_utils2 cm_btnico_utils2--move" data-cm-tooltip="true" data-cm-tooltip-placement="bottom" data-cm-tooltip-theme="darkgreen" title="창이동">창이동</button> -->
+            </div>
+        </div>
+
+        <div data-dock-panel="{dock:'bottom', split:true, minHeight: 39, height: 39, maxHeight: 39}">
+            <!-- inc: 하단 버튼 모음 -->
+            <div class="cm_panel_buttons row col-12 pd-xs box-case3 h-full bd-0">
+
+                <div class="col-3">
+                    <button type="button" class="cm_btn_primary cm_btn_primary--highlight">묶음저장</button>
+                    <button type="button" class="cm_btn_primary cm_btn_primary--gray">선택삭제</button>
+                </div>
+
+                <div class="col-9 ar">
+                    <div class="ib">
+                        <button type="button" class="cm_btn_primary is_active ">금연처방</button>
+                        <button type="button" class="cm_btn_primary">건강검진</button>
+                        <button type="button" class="cm_btn_primary">검사결과</button>
+                        <button type="button" class="cm_btn_primary">진료비</button>
+                    </div>
+
+                    <div class="ib ml-xs">
+                        <button type="button" class="cm_btn_primary cm_btn_primary--gray">차트삭제</button>
+                        <button type="button" class="cm_btn_primary cm_btn_primary--gray">차트수정</button>
+                    </div>
+                    <div class="ib ml-xs">
+                        <button type="button" class="cm_btn_primary">보류</button>
+                        <button type="submit" class="cm_btn_primary cm_btn_primary--highlight">저장</button>
+                    </div>
+                </div>
+            </div>
+            <!--// inc: 하단 버튼 모음 -->
+        </div>
+
+    </div>
+
+</body>
+</html>
