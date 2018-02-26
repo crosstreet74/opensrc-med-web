@@ -15,17 +15,6 @@ Medical Management Web ax5ui-docker Applied
 ![snapshot-min](https://github.com/crosstreet74/opensrc-med-web/blob/master/snapshot-min.gif?raw=true)
 
 
-## What is this?
-
-Medical Management Web ax5ui-docker Applied
-
->focused on making a migration of pre-developed markup to plugin 
-
-![snapshot-resize+docker](https://github.com/crosstreet74/opensrc-med-web/blob/master/snapshot-resize+docker.gif?raw=true)
-
-![snapshot-min](https://github.com/crosstreet74/opensrc-med-web/blob/master/snapshot-min.gif?raw=true)
-
-
 ## Testing Markup
 
 * Clone Repository and Open ***index.html***
