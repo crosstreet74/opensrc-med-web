@@ -19,6 +19,10 @@ Medical Management Web ax5ui-docker Applied
 
 * Clone Repository and Open ***index.html***
 
+## Issues
+
+* Test on Chrome Recommended : *ax5ui-docker* may not compatible with other browsers.
+
 
 ## Library, Plugin Used
 
